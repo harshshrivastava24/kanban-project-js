@@ -30,3 +30,14 @@ nav {
     justify-content: space-between;
     padding: var(--nav-padding);
 }
+
+section {
+    padding: var(--section-padding);
+    display: flex;
+    justify-content: space-around;
+}
+
+section .heading{
+    display: flex;
+    justify-content: space-between;
+}
