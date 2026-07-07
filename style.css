@@ -24,6 +24,12 @@ body {
     color: var(--text-color);
 }
 
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -34,10 +40,41 @@ nav {
 section {
     padding: var(--section-padding);
     display: flex;
-    justify-content: space-around;
+    flex-grow: 1;
+    justify-content: space-between;
+    gap: 15px;
 }
 
-section .heading{
+section .task-column {
+    flex-grow: 1;
+    background-color: rgb(24, 24, 24);
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+}
+
+section .task-column .heading {
     display: flex;
     justify-content: space-between;
+}
+
+section .task-column .task {
+    margin-top: 1rem;
+    cursor: grab;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    background-color: #252424;
+    border-radius: 1rem;
+    padding: 0.5rem 0.8rem;
+}
+
+section .task-column .task .delete {
+    width: fit-content;
+    align-self: flex-end;
+    padding: 0.2rem 0.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    background-color: #f14242;
+    color: white;
 }
